@@ -13,7 +13,15 @@ class App extends Component {
         <h2>Using CKEditor 5 from online builder in React</h2>
         <CKEditor
           editor={Editor}
-          config={editorConfiguration}
+          config={{
+            toolbar: [
+              "bold",
+              "italic",
+              "bulletedList",
+              "numberedList",
+              "horizontalLine",
+            ],
+          }}
           data="<p>Hello from CKEditor 5!</p>"
           onReady={(editor) => {
             // You can store the "editor" and use when it is needed.
